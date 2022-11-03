@@ -23,7 +23,14 @@ import java.util.Scanner;
 // 처리
 // 출력
 public class Main {
+//두 정수 합 구함
+public int plus(int input_first,int input_second) {
+    int output_plus = input_first + input_second;
+    return output_plus;
+    
+}
 public static void main(String[] args) {
+    
 
 /*  
 -테스트 케이스
@@ -40,7 +47,8 @@ scanner.close();
 
 
 // 처리
-int output_plus = input_first + input_second;
+Main main = new Main();
+int output_plus = main.plus(input_first, input_second);
 
 //출력
 System.out.println(output_plus);
