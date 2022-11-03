@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 // -문제파악
 // 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
 // 입력값은 (0 < A, B < 10) 따라야한다.
@@ -25,19 +24,26 @@ import java.util.Scanner;
 // 처리
 // 출력
 public class Main {
+    //두 정수 합 구함
+    public int plus(int A, int B){
+        int total = A+B;
+        return total;
+    }
+
     public static void main(String[] args) {
-Scanner scanner = new Scanner(System.in);
-int T = scanner.nextInt();
-int first;
-int second;
-        int [] arr = {};
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
 
-    first = scanner.nextInt();
-    second = scanner.nextInt();
-    System.out.println(arr);
-
-    
+    for(int i=0; i<T; i++){
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+    //처리
+    Main main = new Main();
+        int total = main.plus(A,B);
+        System.out.println(total);
+     }
+    sc.close();
+    }
 }
- }
 
 
