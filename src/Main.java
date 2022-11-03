@@ -5,7 +5,9 @@ import java.util.Scanner;
 // 입력값은 (0 < A, B < 10) 따라야한다.
 
 // -유추파악
-// 두 정수를 입력해 합을 출력.
+// 첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+//각 테스트 케이스는 한 줄로 이루어져 있으며, 
+//각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 
 // -주요 단어 영문 이름 선정
 // 입력 input
@@ -14,44 +16,28 @@ import java.util.Scanner;
 // 합 hap
 
 // -테스트 케이스
-// 3 +5 =8
-// 20 + 50 = 70 
-// -1 +5 = error
+// 1 1 = 2
+// 2 3 = 5 
+// 3 4 = 7
 
 // -프로그래밍 순서
 // 입력
 // 처리
 // 출력
 public class Main {
-//두 정수 합 구함
-public int plus(int input_first,int input_second) {
-    int output_plus = input_first + input_second;
-    return output_plus;
-    
-}
-public static void main(String[] args) {
-    
-
-/*  
--테스트 케이스
-3 +5 =8
-20 + 50 = 70 
--1 +5 = error
- */
-// -프로그래밍 순서
-// 입력
+    public static void main(String[] args) {
 Scanner scanner = new Scanner(System.in);
-int input_first = scanner.nextInt();
-int input_second = scanner.nextInt();
-scanner.close();
+int T = scanner.nextInt();
+int first;
+int second;
+        int [] arr = {};
 
+    first = scanner.nextInt();
+    second = scanner.nextInt();
+    System.out.println(arr);
 
-// 처리
-Main main = new Main();
-int output_plus = main.plus(input_first, input_second);
-
-//출력
-System.out.println(output_plus);
-    }
+    
 }
+ }
+
 
