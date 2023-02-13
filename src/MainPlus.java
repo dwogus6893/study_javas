@@ -23,7 +23,7 @@ import java.util.Scanner;
 // 입력
 // 처리
 // 출력
-public class Main {
+public class MainPlus {
     //두 정수 합 구함
     public int plus(int A, int B){
         int total = A+B;
@@ -38,7 +38,7 @@ public class Main {
         int A = sc.nextInt();
         int B = sc.nextInt();
     //처리
-    Main main = new Main();
+    MainPlus main = new MainPlus();
         int total = main.plus(A,B);
         System.out.println(total);
      }
