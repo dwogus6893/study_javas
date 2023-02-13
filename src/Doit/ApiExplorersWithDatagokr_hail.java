@@ -12,21 +12,14 @@ import java.net.URLEncoder;
 public class ApiExplorersWithDatagokr_hail {
     
  public static void main(String[] args) throws UnsupportedEncodingException {
-        /*
-         * 외교부 국가 지역별 최신 안전소식(코로나 관련)
-         * https://apis.data.go.kr/1741000/TsunamiShelter3/getTsunamiShelter1List?
-         * serviceKey=NzstB3xGw8fHulyfoEqU56BRhGdw45Jeq6BpoZJKuXa3rKcuyaGut5yVyhpua4lYU%
-         * 2F6lR5tF0KZdwOsTOEvvhw%3D%3D
-         * &pageNo=1
-         * &numOfRows=10
-         * &type=xml
-         */
+        
 
         StringBuilder urlBuilder = new StringBuilder(
-                "	http://apis.data.go.kr/1741000/TsunamiShelter3"); /* URL */
+        "http://apis.data.go.kr/1741000/TsunamiShelter3/getTsunamiShelter1List"); /* URL */
+        // url을 https로 하면 ssl에러발생
         // 2. 오픈 API의요청 규격에 맞는 파라미터 생성, 발급받은 인증키.
         urlBuilder.append("?" + URLEncoder.encode("ServiceKey", "UTF-8") + "=").append(
-        "NzstB3xGw8fHulyfoEqU56BRhGdw45Jeq6BpoZJKuXa3rKcuyaGut5yVyhpua4lYU%2F6lR5tF0KZdwOsTOEvvhw%3D%3D");
+        "o%2FsrPf7Pz9iIGPP008ThNwxxsOAGbRqLYHG070csNP8dMRMuaaIgsaIqF62mGn8yXhIQX2ahQRfdJ8UDcfBx9A%3D%3D");
         // Service Key
 
         urlBuilder.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + URLEncoder.encode("1", "UTF-8"));// 페이지번호
@@ -40,6 +33,7 @@ public class ApiExplorersWithDatagokr_hail {
         HttpURLConnection conn = null;
         try {
             url = new URL(urlBuilder.toString());
+            // send를 던져서 답을 받는다
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             // conn.setRequestProperty(null, null);
@@ -61,6 +55,7 @@ public class ApiExplorersWithDatagokr_hail {
             }
             int i = 1;
             reader.close();
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
